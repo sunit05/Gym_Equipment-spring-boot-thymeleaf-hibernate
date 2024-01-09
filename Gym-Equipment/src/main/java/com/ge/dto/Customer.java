@@ -29,6 +29,10 @@ public class Customer {
 		return products;
 	}
 
+	public int getId() {
+		return id;
+	}
+	
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}

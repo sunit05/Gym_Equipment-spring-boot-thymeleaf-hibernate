@@ -21,5 +21,9 @@ public class AdminService{
 	public Admin saveAdmin(Admin admin) {
 		return adminDao.saveAdmin(admin);
 	}
+	
+	public boolean adminLogin(Admin admin) {
+		return adminDao.adminLogin(admin);
+	}
 }
 

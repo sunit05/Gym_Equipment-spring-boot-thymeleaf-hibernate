@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Gym Equipment</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container my-2">
+		<a th:href="@{/showAllAdmins}" class="btn btn-primary btn-sm mb-3"> view Admins </a>
+		
+		<a th:href="@{/showNewAdminForm}" class="btn btn-primary btn-sm mb-3"> Add Admin </a>
+		<a th:href="@{/showNewAdminLoginForm}" class="btn btn-primary btn-sm mb-3"> login Admin </a>
+
+	</div>
+</body>
+</html>

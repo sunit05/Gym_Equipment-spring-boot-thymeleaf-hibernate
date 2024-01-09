@@ -22,5 +22,16 @@ public class AdminDao {
 		return gymRepository.save(admin);
 	}
 	
+	public boolean adminLogin(Admin admin) {
+		List<Admin> admins = getAllAdmins();
+		for (Admin a : admins) {
+			if (admin.getUsername().equals(a.getUsername()) 
+					&& admin.getPassword().equals(a.getPassword())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	
 }

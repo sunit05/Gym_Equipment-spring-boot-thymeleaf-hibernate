@@ -18,8 +18,13 @@ public class AdminController {
 
 	@GetMapping("/")
 	public String viewHomePage(Model model) {
+		return "home";
+	}
+
+	@GetMapping("/showAllAdmins")
+	public String showAllAdmins(Model model) {
 		model.addAttribute("listAdmins", adminService.getAllAdmins());
-		return "index";
+		return "showAllAdmins";
 	}
 
 	@GetMapping("/showNewAdminForm")
@@ -37,5 +42,24 @@ public class AdminController {
 		return "redirect:/";
 	}
 
+	@GetMapping("/showNewAdminLoginForm")
+	public String showNewAdminLoginForm(Model model) {
+		// create model attribute to bind form data
+		Admin admin = new Admin();
+		model.addAttribute("admin", admin);
+		return "login_admin";
+	}
+
+	@PostMapping("/loginAdmin")
+	public String loginAdmin(@ModelAttribute("admin") Admin admin) {
+		// save admin to database
+
+		if (adminService.adminLogin(admin)) {
+			return "redirect:/";
+		}
+		else {
+			return "redirect:/login_admin";
+		}
+	}
 
 }
