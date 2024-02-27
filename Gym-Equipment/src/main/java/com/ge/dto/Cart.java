@@ -23,6 +23,10 @@ public class Cart {
 	@OneToMany
 	public List<Product> products;
 	
+	public int getId() {
+		return id;
+	}
+	
 	public Customer getCustomer() {
 		return customer;
 	}

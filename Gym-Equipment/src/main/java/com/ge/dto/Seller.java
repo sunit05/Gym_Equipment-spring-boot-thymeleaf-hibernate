@@ -24,6 +24,10 @@ public class Seller {
 	@OneToOne
 	public Admin admin;
 
+	public int getId() {
+		return id;
+	}
+	
 	public Admin getAdmin() {
 		return admin;
 	}

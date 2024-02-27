@@ -25,5 +25,13 @@ public class AdminService{
 	public boolean adminLogin(Admin admin) {
 		return adminDao.adminLogin(admin);
 	}
+	
+	public boolean authSeller(int seller_id, Admin admin) {
+		return adminDao.authSeller(seller_id, admin);
+	}
+	
+	public Admin getAdminById(long id) {
+		return adminDao.getAdminById(id);
+	}
 }
 

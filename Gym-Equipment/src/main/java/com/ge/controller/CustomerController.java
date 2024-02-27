@@ -47,4 +47,15 @@ public class CustomerController {
 		customerService.updateCustomer(customer);
 	}
 	
+	@PostMapping("/loginCustomer")
+	public String loginCustomer(@ModelAttribute("customer") Customer customer) {
+
+		if (customerService.customerLogin(customer)) {
+			return "redirect:/";
+		}
+		else {
+			return "redirect:/login_customer";
+		}
+	}
+	
 }

@@ -31,6 +31,10 @@ public class Product {
 	@OneToMany
 	public List<ProductReview> productReviews;
 	
+	public int getId() {
+		return id;
+	}
+	
 	public Seller getSeller() {
 		return seller;
 	}

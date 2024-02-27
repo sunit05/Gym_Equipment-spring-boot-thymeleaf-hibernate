@@ -37,6 +37,16 @@ public class CustomerDao {
 		customer2.setPassword(customer.getPassword());
 	}
 	
+	public boolean customerLogin(Customer customer) {
+		List<Customer> customers = getAllCustomers();
+		for (Customer a : customers) {
+			if (customer.getUsername().equals(a.getUsername()) 
+					&& customer.getPassword().equals(a.getPassword())) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 //		if (customer.getUsername() == null) {
 //			customer2.setUsername(customer2.getUsername());

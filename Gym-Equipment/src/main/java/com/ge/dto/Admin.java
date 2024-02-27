@@ -19,6 +19,10 @@ public class Admin {
 	private String email;
 	private int contactNo;
 
+	public int getId() {
+		return id;
+	}
+
 	public String getName() {
 		return name;
 	}

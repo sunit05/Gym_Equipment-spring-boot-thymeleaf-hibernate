@@ -30,4 +30,8 @@ public class CustomerService {
 		customerDao.deleteCustomerById(id);
 	}
 	
+	public boolean customerLogin(Customer customer) {
+		return customerDao.customerLogin(customer);
+	}
+	
 }
